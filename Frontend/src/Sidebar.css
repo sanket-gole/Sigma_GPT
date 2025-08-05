@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    /* padding: 0; */
+ 
+}
+.sidebar{
+    background-color: #171717;
+    color: #b4b4b4;
+    height: 100vh;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+button{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: transparent;
+    border: solid 0.5px rgba(255,255,255,0.5  );
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: rgba(180,180,180,0.1);
+}
+
+.logo{
+    height: 35px;
+    width: 55px;
+    filter: brightness(0) invert(1);
+    
+}
+.logo2{
+     filter: brightness(0) invert(1);
+}
+
+button span{
+    font-size: 20px;
+}
+
+.history{
+    margin: 10px;
+    padding: 10px;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.history li{
+    list-style-type: none;
+    cursor: pointer;
+    padding: 2px 5px;
+    margin-bottom: 0.3rem;
+    font-size: 14px;
+    border: solid 10px transparent;
+    font-size: 18px;
+    color: rgb(220, 211, 211);
+    font-weight: 700;
+    position: relative;
+}
+
+.history li:hover{
+    background-color: rgba(180,180,180,0.1);
+    border-radius: 15px;
+}
+
+.sign{
+    padding: 10px;
+    margin: 10px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    border-top: solid 0.25px rgba(255,255,255,0.5);
+}
+
+
+.history::-webkit-scrollbar {
+    width: 8px;
+}
+
+.history::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.history::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+}
+
+.history::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+
+.fa-trash{
+    opacity: 0;
+    position: absolute;
+    right: 0;
+}
+
+.history li:hover .fa-trash {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.fa-trash:hover {
+    color: red;
+    cursor: pointer;
+}
+
+
+.highlighted{
+    background-color: rgba(180,180,180,0.05);
+    border-radius: 10px;
+    
+}

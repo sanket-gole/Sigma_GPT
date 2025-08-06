@@ -37,7 +37,7 @@ function ChatWindow() {
       }),
     };
     try {
-      const response = await fetch("http://localhost:3000/api/chat", option);
+      const response = await fetch("https://sigma-gpt-backend.onrender.com/api/chat", option);
       const res = await response.json();
       console.log(res);
       setReply(res.reply);

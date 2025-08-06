@@ -5,7 +5,7 @@ const getOpenAIAPIResponse = async (message) => {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      Authorization: process.env.OPENAI_API_KEY || "Bearer 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"
+      "Authorization": `Bearer ${process.env.OPENAI_API_KEY}`, // Use Bearer token format
     },
     body: JSON.stringify({
       model: "openai/gpt-3.5-turbo",

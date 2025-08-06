@@ -72,7 +72,7 @@ router.post("/chat",async(req,res)=>{
     const{threadId,message}=req.body;
 
     if(!threadId || !message){
-         res.status(400).json({error:"Thread ID and message are required"});
+        return res.status(400).json({error:"Thread ID and message are required"});
     }
     try{
 
@@ -90,6 +90,9 @@ router.post("/chat",async(req,res)=>{
         }
 
         const assistantReplay= await getOpenAIAPIResponse(message);
+        if (!assistantReplay) {
+  return res.status(500).json({ error: "Failed to get response from AI" });
+}
 
         thread.messages.push({role:"assistant",content:assistantReplay});
         thread.updatedAt=new Date();
